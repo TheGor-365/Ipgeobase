@@ -5,7 +5,7 @@
 
 ## Summary
 
-Ipgeobase gem that returns metadata about IP. This gem works with ip-api.com which allows you to get information by IP - for example, country, city, coordinates.
+Ipgeobase gem that returns metadata about IP. This gem works with `https://ip-api.com` which allows you to get information by IP - for example, country, city, coordinates.
 
 ## Installation
 
@@ -22,20 +22,20 @@ And then execute:
 Or install it yourself as:
 
     $ gem install ipgeobase
-    
+
 
 ## Usage
 
-The gem contains the `lookup('8.8.8.8')` method, which accepts an IP address and returns a metadata object. Use next methods for 
+The gem contains the `lookup('8.8.8.8')` method, which accepts an IP address and returns a metadata object. Use next methods for
 ```ruby
 Ipgeobase.lookup('your_ip')
-``` 
+```
 
-* `city` 
-* `country` 
-* `country_code` 
-* `lat` 
-* `lon` 
+* `city`
+* `country`
+* `country_code`
+* `lat`
+* `lon`
 
 ## Example
 
