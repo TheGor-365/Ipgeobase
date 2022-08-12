@@ -55,7 +55,9 @@ ip_meta.lon # -77.5
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `gem install specific_install && gem specific_install -l https://github.com/TheGor-365/Ipgeobase`. 
+To install this gem onto your local machine, run: 
+
+`gem install specific_install && gem specific_install -l https://github.com/TheGor-365/Ipgeobase`
 
 ## Contributing
 
