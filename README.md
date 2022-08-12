@@ -34,6 +34,8 @@ location = Ipgeobase.lookup('8.8.8.8')
 puts location.country #=> United States
 ```
 
+You can get:
+
 * `city`
 * `country`
 * `country_code`
@@ -43,12 +45,12 @@ puts location.country #=> United States
 ## Example
 
 ```ruby
-ip_meta = Ipgeobase.lookup('8.8.8.8')
-ip_meta.city # Ashburn
-ip_meta.country # United States
-ip_meta.country_code # US
-ip_meta.lat # 39.03
-ip_meta.lon # -77.5
+location = Ipgeobase.lookup('8.8.8.8')
+location.city # Ashburn
+location.country # United States
+location.country_code # US
+location.lat # 39.03
+location.lon # -77.5
 ```
 
 ## Development
