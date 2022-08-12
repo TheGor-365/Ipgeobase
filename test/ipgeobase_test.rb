@@ -6,13 +6,6 @@ require_relative "../lib/ipgeobase"
 class IpgeobaseTest < Minitest::Test
   include WebMock::API
 
-  def test_api_url
-    body = "\napi_url:\t200\n"
-    stub_request(:get, "http://www.ip-api.com/").to_return(status: 200, body: body)
-
-    assert body == "\napi_url:\t200\n"
-  end
-
   def test_xml_data_get
     body = "\nxml_data_get:\t200\n"
 
