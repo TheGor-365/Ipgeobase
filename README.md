@@ -28,7 +28,10 @@ Or install it yourself as:
 
 The gem contains the `lookup('your_ip')` method, which accepts an IP address and returns a metadata object. Use next methods for
 ```ruby
-Ipgeobase.lookup('your_ip')
+require 'ipgeobase'
+
+location = Ipgeobase.lookup('8.8.8.8')
+puts location.country #=> United States
 ```
 
 * `city`
