@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ipgeobase
+    $ gem install specific_install && gem specific_install -l https://github.com/TheGor-365/Ipgeobase
 
 
 ## Usage
