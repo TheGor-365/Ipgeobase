@@ -1,8 +1,12 @@
 # Ipgeobase
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ipgeobase`. To experiment with that code, run `bin/console` for an interactive prompt.
+![CI]https://github.com/TheGor-365/Ipgeobase/actions/workflows/main.yml/badge.svg
+![TESTS]https://github.com/TheGor-365/Ipgeobase/actions/workflows/test.yml/badge.svg
 
-TODO: Delete this and the text above, and describe your gem
+
+## Summary
+
+Ipgeobase gem that returns metadata about IP. This gem works with ip-api.com which allows you to get information by IP - for example, country, city, coordinates.
 
 ## Installation
 
@@ -19,10 +23,31 @@ And then execute:
 Or install it yourself as:
 
     $ gem install ipgeobase
+    
 
 ## Usage
 
-TODO: Write usage instructions here
+The gem contains the `lookup('8.8.8.8')` method, which accepts an IP address and returns a metadata object. Use next methods for 
+```ruby
+Ipgeobase.lookup('your_ip')
+``` 
+
+* `city` 
+* `country` 
+* `country_code` 
+* `lat` 
+* `lon` 
+
+## Example
+
+```ruby
+ip_meta = Ipgeobase.lookup('8.8.8.8')
+ip_meta.city # Ashburn
+ip_meta.country # United States
+ip_meta.country_code # US
+ip_meta.lat # 39.03
+ip_meta.lon # -77.5
+```
 
 ## Development
 
@@ -32,4 +57,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ipgeobase.
+Bug reports and pull requests are welcome on GitHub at https://github.com/TheGor-365/ipgeobase.
