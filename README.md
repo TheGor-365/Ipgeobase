@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-The gem contains the `lookup('8.8.8.8')` method, which accepts an IP address and returns a metadata object. Use next methods for
+The gem contains the `lookup('your_ip')` method, which accepts an IP address and returns a metadata object. Use next methods for
 ```ruby
 Ipgeobase.lookup('your_ip')
 ```
