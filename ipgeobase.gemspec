@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["gor"]
   spec.email         = ["7495500@gmail.com"]
 
-  spec.summary       = "The gem contains the `lookup('8.8.8.8')` method, which accepts an IP address and returns a metadata object."
-  spec.description   = "This gem returns metadata about the IP. The gem contains the `lookup('8.8.8.8')` method, which accepts an IP address and returns a metadata object."
+  spec.summary       = "The gem contains the `lookup('ip')` method, which accepts an IP and returns a metadata object."
+  spec.description   = "The gem contains the `lookup('ip')` method, which accepts an IP and returns a metadata object."
   spec.homepage      = "https://github.com/TheGor-365/Ipgeobase"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 

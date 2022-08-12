@@ -3,7 +3,4 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "ipgeobase"
 require "minitest/autorun"
-require 'webmock/minitest'
-
-include WebMock::API
-WebMock.enable!
+require "webmock/minitest"

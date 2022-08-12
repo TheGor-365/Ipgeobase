@@ -11,8 +11,8 @@ gem "minitest", "~> 5.0"
 
 gem "rubocop", "~> 1.7"
 
-gem 'nokogiri-happymapper', require: 'happymapper'
+gem "nokogiri-happymapper", require: "happymapper"
 
 group :test do
-    gem "webmock"
+  gem "webmock"
 end
