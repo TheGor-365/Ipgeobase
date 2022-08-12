@@ -1,4 +1,8 @@
 # Ipgeobase
+![CI]https://github.com/TheGor-365/Ipgeobase/actions/workflows/main.yml/badge.svg
+
+## Summary
+
 Ipgeobase gem that returns metadata about IP. This gem works with ip-api.com which allows you to get information by IP - for example, country, city, coordinates.
 
 ## Installation
