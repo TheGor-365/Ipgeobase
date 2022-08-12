@@ -46,6 +46,7 @@ You can get:
 
 ```ruby
 location = Ipgeobase.lookup('8.8.8.8')
+
 location.city # Ashburn
 location.country # United States
 location.country_code # US
