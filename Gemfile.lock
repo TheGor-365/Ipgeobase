@@ -54,7 +54,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   nokogiri-happymapper
   rake (~> 13.0)
-  rubocop (~> 1.7)
+  rubocop
   webmock
 
 BUNDLED WITH
