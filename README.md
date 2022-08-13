@@ -9,10 +9,10 @@ Ipgeobase gem that returns metadata about IP. This gem works with `https://ip-ap
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's `Gemfile`:
 
 ```ruby
-gem 'ipgeobase'
+gem 'ipgeobase', git: 'git@github.com:TheGor-365/Ipgeobase.git'
 ```
 
 And then execute:
