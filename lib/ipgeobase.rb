@@ -7,8 +7,6 @@ require "net/http"
 
 # Service to get location info by ip
 module Ipgeobase
-  class Error < StandardError; end
-
   class << self
     def lookup(ip)
       lookup_uri = Addressable::Template.new("http://{host}{/segments*}{?fields}")
