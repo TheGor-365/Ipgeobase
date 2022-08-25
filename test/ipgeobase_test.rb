@@ -10,6 +10,5 @@ class IpgeobaseTest < Minitest::Test
   def test_xml_data_get
     request = URI.parse API_URL
     stub_request(:any, request).to_return(status: 200, body: 'hey')
-    p assert :body != 'hey'
   end
 end
