@@ -8,7 +8,7 @@ class Address
   tag "query"
 
   element :country, String, tag: "country"
-  element :countryCode, String, tag: "countryCode"
+  element :country_code, String, tag: "country_code"
   element :city, String, tag: "city"
   has_one :lat, Float
   has_one :lon, Float
@@ -25,8 +25,8 @@ class Address
     puts @country
   end
 
-  def countryCode
-    puts @countryCode
+  def country_code
+    puts @country_code
   end
 
   def city
