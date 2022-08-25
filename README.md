@@ -31,7 +31,7 @@ The gem contains the `lookup('your_ip')` method, which accepts an IP address and
 require 'ipgeobase'
 
 location = Ipgeobase.lookup('8.8.8.8')
-puts location.country #=> United States
+location.country #=> United States
 ```
 
 You can get:
