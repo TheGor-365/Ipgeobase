@@ -5,18 +5,11 @@ require_relative "../lib/ipgeobase"
 
 class IpgeobaseTest < Minitest::Test
   include WebMock::API
+  API_URL = "http://ip-api.com/xml/81.200.23.8?country,countryCode,city,lat,lon"
 
   def test_xml_data_get
-    body = "\nxml_data_get:\t200\n"
-
-    uri_template = Addressable::Template.new("http://{host}{/segments*}{?fields}")
-                                        .expand({
-                                                  "host" => "ip-api.com",
-                                                  "segments" => ["xml", "81.200.23.8"],
-                                                  "fields" => "country,countryCode,city,lat,lon"
-                                                })
-    stub_request(:any, uri_template).to_return(status: 200, body: body)
-
-    assert body == "\nxml_data_get:\t200\n"
+    request = URI.parse API_URL
+    stub_request(:any, request).to_return(status: 200, body: 'hey')
+    p assert :body != 'hey'
   end
 end
