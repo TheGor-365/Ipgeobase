@@ -8,10 +8,10 @@ class Address
   tag "query"
 
   element :country, String, tag: "country"
-  element :country_code, String, tag: "country_code"
+  element :country_code, String, tag: "countryCode"
   element :city, String, tag: "city"
-  has_one :lat, Float
-  has_one :lon, Float
+  element :lat, Float, tag: "lat"
+  element :lon, Float, tag: "lon"
 
   def lat
     puts @lat.round(2)
