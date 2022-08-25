@@ -14,22 +14,22 @@ class Address
   element :lon, Float, tag: "lon"
 
   def lat
-    puts @lat.round(2)
+    @lat.round(2)
   end
 
   def lon
-    puts @lon.round(2)
+    @lon.round(2)
   end
 
   def country
-    puts @country
+    @country
   end
 
   def country_code
-    puts @country_code
+    @country_code
   end
 
   def city
-    puts @city
+    @city
   end
 end
