@@ -38,7 +38,7 @@ You can get:
 
 * `city`
 * `country`
-* `countryCode`
+* `country_code`
 * `lat`
 * `lon`
 
@@ -49,7 +49,7 @@ location = Ipgeobase.lookup('8.8.8.8')
 
 location.city # Ashburn
 location.country # United States
-location.countryCode # US
+location.country_code # US
 location.lat # 39.03
 location.lon # -77.5
 ```
