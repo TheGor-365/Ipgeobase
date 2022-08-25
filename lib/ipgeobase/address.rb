@@ -1,16 +1,35 @@
-require 'happymapper'
+# frozen_string_literal: true
 
+require "happymapper"
+# Configures parsed data
 class Address
   include HappyMapper
 
-  tag 'query'
+  tag "query"
 
-  element :country, String, tag: 'country'
-  element :countryCode, String, tag: 'countryCode'
-  element :city, String, tag: 'city'
+  element :country, String, tag: "country"
+  element :countryCode, String, tag: "countryCode"
+  element :city, String, tag: "city"
   has_one :lat, Float
   has_one :lon, Float
 
-  def lat; @lat.round(2); end
-  def lon; @lon.round(2); end
+  def lat
+    puts @lat.round(2)
+  end
+
+  def lon
+    puts @lon.round(2)
+  end
+
+  def country
+    puts @country
+  end
+
+  def countryCode
+    puts @countryCode
+  end
+
+  def city
+    puts @city
+  end
 end
