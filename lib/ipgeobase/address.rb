@@ -10,14 +10,6 @@ class Address
   element :country, String, tag: "country"
   element :country_code, String, tag: "countryCode"
   element :city, String, tag: "city"
-  has_one :lat, Float
-  has_one :lon, Float
-
-  def lat
-    @lat.round(2)
-  end
-
-  def lon
-    @lon.round(2)
-  end
+  element :lat, Float, tag: "lat"
+  element :lon, Float, tag: "lon"
 end
