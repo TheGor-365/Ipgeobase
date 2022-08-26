@@ -31,7 +31,7 @@ The gem contains the `lookup('your_ip')` method, which accepts an IP address and
 require 'ipgeobase'
 
 location = Ipgeobase.lookup('8.8.8.8')
-location.country #=> United States
+puts location.country #=> United States
 ```
 
 You can get:
@@ -47,11 +47,11 @@ You can get:
 ```ruby
 location = Ipgeobase.lookup('8.8.8.8')
 
-location.city # Ashburn
-location.country # United States
-location.country_code # US
-location.lat # 39.03
-location.lon # -77.5
+puts location.city # Ashburn
+puts location.country # United States
+puts location.country_code # US
+puts location.lat # 39.03
+puts location.lon # -77.5
 ```
 
 ## Development
