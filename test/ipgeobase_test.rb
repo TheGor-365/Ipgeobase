@@ -6,25 +6,23 @@ require_relative "../lib/ipgeobase"
 class IpgeobaseTest < Minitest::Test
   GET_XML_INFO = "http://ip-api.com/xml/81.200.23.8?fields=country,countryCode,city,lat,lon"
 
-  def test_uri
-    stub_request(:get, GET_XML_INFO)
-      .with(
-        headers: {
-          "Accept" => "*/*",
-          "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
-          "User-Agent" => "Ruby"
-        }
-      )
-      .to_return(status: 200, body: "", headers: {})
-  end
+  def test_lookup
+    body = '<?xml version="1.0" encoding="UTF-8"?>
+            <query>
+              <country>Russia</country>
+              <countryCode>RU</countryCode>
+              <city>Moscow</city>
+              <lat>55.7483</lat>
+              <lon>37.6171</lon>
+            </query>'
 
-  def some_else
-    ip_meta = Ipgeobase.lookup("81.200.23.8")
+    stub_request(:get, GET_XML_INFO).to_return(status: 200, body: body)
+    address = Address.parse(body)
 
-    assert ip_meta.country == "Russia"
-    assert ip_meta.city == "Moscow"
-    assert ip_meta.country_code == "RU"
-    assert ip_meta.lat.to_i == 55.7483.to_i
-    assert ip_meta.lon.to_i == 37.6171.to_i
+    assert_equal 'Russia', address.country
+    assert_equal 'Moscow', address.city
+    assert_equal 'RU', address.country_code
+    assert_equal 55.7483, address.lat
+    assert_equal 37.6171, address.lon
   end
 end
