@@ -17,7 +17,7 @@ class IpgeobaseTest < Minitest::Test
   def test_loocup
     stub_request(:get, GET_XML_INFO).to_return(status: 200, body: XML)
 
-    address = Address.parse(XML)
+    address = Ipgeobase.lookup('81.200.23.8')
 
     assert_equal "Russia", address.country
     assert_equal "Moscow", address.city
